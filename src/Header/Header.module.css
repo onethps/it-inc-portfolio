@@ -1,0 +1,5 @@
+.header {
+    display: flex;
+    background-color: #61dafb;
+    justify-content: flex-end;
+}

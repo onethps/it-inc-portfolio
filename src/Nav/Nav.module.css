@@ -1,0 +1,11 @@
+.navStyle {
+    display: flex;
+}
+
+.navStyle ul {
+    list-style: none;
+    display: flex;
+    width: 350px;
+    justify-content: space-around;
+}
+

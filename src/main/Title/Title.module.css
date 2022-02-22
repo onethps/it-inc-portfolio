@@ -1,0 +1,26 @@
+.titleBlock{
+    background-color: lime;
+    padding: 50px;
+}
+
+
+.container{
+    margin: 0 auto;
+    border: 1px solid;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.welcomeBlock{
+    width: 400px
+}
+
+.photoStyle{
+    background-color: lightgrey;
+    width: 200px;
+    height: 250px;
+}
