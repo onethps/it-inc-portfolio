@@ -1,0 +1,25 @@
+.navStyle {
+    display: flex;
+    & ul {
+        list-style: none;
+        display: flex;
+        width: 350px;
+        justify-content: space-around;
+        & li a {
+            font-family: "Rubik",sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                color: #ffd15c;
+            }
+        }
+    }
+
+}
+
+
+
+
+

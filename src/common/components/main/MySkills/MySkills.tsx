@@ -1,38 +1,44 @@
 import React from 'react';
-import style from './MySkills.module.css'
+import style from './MySkills.module.scss'
+import BlockTitle from "../../../BlockTitle/BlockTitle";
 
 const MySkills = () => {
 
+    const red = 'red'
+    const blue = 'blue'
+    const yellow = 'yellow'
 
-    const renderSkilss = () => {
+
+    const renderSkilss = (bgColor:string) => {
         return (
-            <div className={style.skillItem}>
+            <div className={bgColor === 'red' ? style.skillItem : bgColor === 'blue' ? style.skillItem1:
+                bgColor === 'yellow' ? style.skillItem2 : '' }>
                 <div className={style.iconSkill}/>
-                <div className={style.titleSkill}>React</div>
-                <div className={style.descSkill}>
+                <h3 className={style.titleSkill}>React</h3>
+                <p className={style.descSkill}>
                     Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation
-                </div>
+                </p>
             </div>
         )
     }
+
+
 
     return (
         <div className={style.mainBox}>
             <div className={style.container}>
                 <div className={style.blockName}>
-                    <h3>My Skills</h3>
+                    <BlockTitle title={'My Skills'} />
                 </div>
                 <div className={style.skillBlock}>
 
-                    {renderSkilss()}
-                    {renderSkilss()}
-                    {renderSkilss()}
-                    {renderSkilss()}
-                    {renderSkilss()}
-                    {renderSkilss()}
+                    {renderSkilss(red)}
+                    {renderSkilss(blue)}
+                    {renderSkilss(yellow)}
+
 
 
 

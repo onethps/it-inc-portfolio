@@ -1,5 +1,6 @@
 import React from 'react';
-import style from './MyPortfolio.module.css'
+import style from './MyPortfolio.module.scss'
+import BlockTitle from "../../../BlockTitle/BlockTitle";
 
 const MyPortfolio = () => {
 
@@ -8,9 +9,8 @@ const MyPortfolio = () => {
         return (
             <div className={style.skillItem}>
                 <div className={style.imageCover}/>
-                <button className={style.buttonStyle}>Watch</button>
                 <div className={style.textBlock}>
-                    <span className={style.textName}>Project Name</span>
+                    <h4 className={style.textName}>Todolist</h4>
                     <div className={style.descSkill}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     </div>
@@ -23,10 +23,11 @@ const MyPortfolio = () => {
         <div className={style.mainBox}>
             <div className={style.container}>
                 <div className={style.blockName}>
-                    <h3>My Portfolio</h3>
+                    <BlockTitle title={'My Portfolio'} />
                 </div>
                 <div className={style.skillBlock}>
 
+                    {renderSkilss()}
                     {renderSkilss()}
                     {renderSkilss()}
 

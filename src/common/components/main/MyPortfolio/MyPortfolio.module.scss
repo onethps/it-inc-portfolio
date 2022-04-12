@@ -1,0 +1,76 @@
+@import './src/common/styles/sass/variables';
+
+.mainBox {
+    background-color: $mainBackgroundColor;
+    padding: 50px;
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+
+        .blockName {
+           text-align: left;
+        }
+
+        .skillBlock {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 15px;
+            padding-right: 15px;
+            align-items: flex-start;
+
+            .skillItem {
+                margin: 10px auto;
+                position: relative;
+                background-color: $secondBackgroundColor;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 20px;
+                max-width: 300px;
+                box-sizing: border-box;
+
+                .imageCover {
+                    display: flex;
+                    height: 200px;
+                    background-color: white;
+                    position: relative;
+                    border-radius: 20px;
+                    border-bottom-left-radius: 2px;
+                    border-bottom-right-radius: 2px;
+                }
+
+                .textBlock {
+                    padding: 20px;
+
+                    .textName {
+                        font-size: 20px;
+                        font-family: "Rubik",sans-serif;
+                        font-weight: 700;
+                        color: white;
+                        margin: 20px 0;
+                        margin-top: 0;
+
+                    }
+
+                    .descSkill {
+                        font-size: 14px;
+                        color: #8b88b1;
+                        margin-bottom: 0;
+
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

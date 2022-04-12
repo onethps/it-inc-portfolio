@@ -1,0 +1,13 @@
+.footerBlock{
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    align-content: center;
+  }
+
+
+}

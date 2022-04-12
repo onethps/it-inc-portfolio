@@ -1,0 +1,7 @@
+@import "src/common/styles/sass/variables";
+
+.header {
+    display: flex;
+    background-color: $secondBackgroundColor;
+    justify-content: flex-end;
+}

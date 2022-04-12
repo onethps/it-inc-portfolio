@@ -1,7 +1,7 @@
 import React from 'react';
-import style from './Title.module.css'
+import style from './FirstBlock.module.scss'
 
-const Title = () => {
+const FirstBlock = () => {
     return (
         <div className={style.titleBlock}>
             <div className={style.container}>
@@ -17,4 +17,4 @@ const Title = () => {
     );
 };
 
-export default Title;
+export default FirstBlock;

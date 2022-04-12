@@ -1,5 +1,7 @@
+@import "src/common/styles/sass/variables";
+
 .titleBlock{
-    background-color: lime;
+    background-color: $mainBackgroundColor;
     padding: 50px;
 }
 
