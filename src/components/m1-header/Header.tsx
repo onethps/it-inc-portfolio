@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from "../Nav/Nav";
+import Nav from "../m2-nav/Nav";
 import style from './Header.module.scss'
 
 const Header = () => {

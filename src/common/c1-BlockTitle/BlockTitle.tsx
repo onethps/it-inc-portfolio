@@ -1,13 +1,13 @@
 import React from 'react';
-import s from './BlockTitle.module.scss'
+import style from './BlockTitle.module.scss'
 
 type BlockTitleType = {
     title:string
 }
 
-const BlockTitle = ({title,}:BlockTitleType) => {
+export const BlockTitle = ({title}:BlockTitleType) => {
     return (
-        <div className={s.blockTitleBox}>
+        <div className={style.blockTitleBox}>
                      <h3>{title}</h3>
         </div>
     );

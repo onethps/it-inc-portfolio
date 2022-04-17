@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './MyPortfolio.module.scss'
-import BlockTitle from "../../../BlockTitle/BlockTitle";
+import BlockTitle from "../../../common/c1-BlockTitle/BlockTitle";
 
 const MyPortfolio = () => {
 
