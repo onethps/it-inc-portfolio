@@ -22,13 +22,10 @@ const Contacts = () => {
                         </div>
 
                         <div className={style.Subject}>
-                            <input type="subject" id="subject" name="subject" placeholder="subject" autoComplete="off" className={style.inputSubject}/>
+                            <input type="subject" id="subject" name="subject" placeholder="Subject" autoComplete="off" className={style.inputSubject}/>
                         </div>
 
                         <textarea placeholder='Write message' rows={10}/>
-
-                        {/*<button className={style.buttonSend} type="submit">Send</button>*/}
-
                         <CustomButton text={'Submit'} customClassName={style.buttonStule}/>
                     </div>
                 </form>

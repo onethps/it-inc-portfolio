@@ -5,77 +5,24 @@
     padding: 50px;
 
     .container {
-        width: 80%;
+        max-width: 1200px;
         margin: 0 auto;
+        padding: 130px 0 130px 0;
+
 
         .blockName {
             text-align: left;
         }
 
-        .skillBlock {
+        .mainBlock {
             display: flex;
             flex-wrap: wrap;
-            padding-left: 15px;
-            padding-right: 15px;
-            align-items: flex-start;
-
-            .skillItem {
-                margin: 10px auto;
-                position: relative;
-                background-color: $secondBackgroundColor;
-                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-                border-radius: 20px;
-                max-width: 300px;
-                box-sizing: border-box;
-
-                .imageCover {
-                    display: flex;
-                    height: 200px;
-                    background-image: url("https://miro.medium.com/max/1400/1*y4AhxtB6WYbAFV_7vnw8bw.png");
-                    background-repeat: no-repeat;
-                    background-size: auto 250px;
-                    position: relative;
-                    background-position: center;
-                    border-radius: 20px 20px 2px 2px;
-
-
-                    &:hover{
-                        background-size: auto 450px;
-                        transition: 1.2s;
-                        cursor: pointer;
-                    }
-                }
-
-                .textBlock {
-                    padding: 20px;
-
-                    .textName {
-                        font-size: 20px;
-                        font-family: "Rubik",sans-serif;
-                        font-weight: 700;
-                        color: white;
-                        margin-top: 0;
-
-                    }
-
-                    .descSkill {
-                        font-size: 14px;
-                        color: #8b88b1;
-                        margin-bottom: 0;
-
-                    }
-                }
-
-
-                &:hover{
-                    .textName, .descSkill{
-                        color: #ffd15c;
-                        transition: 1s;
-                        cursor: pointer;
-                    }
-                }
-
+            justify-content: space-around;
+            @media screen and (max-width: 768px){
+                flex-direction: column;
             }
+
+
         }
     }
 

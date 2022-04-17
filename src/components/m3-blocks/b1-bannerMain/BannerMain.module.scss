@@ -19,7 +19,7 @@
             & h2 {
                 font-size: 52px;
                 line-height: 54px;
-                color: #fca61f;
+                color: $mainButtonColor;
                 margin: 10px 0;
                 font-weight: 600;
             }
@@ -29,7 +29,7 @@
                 font-size: 70px;
                 line-height: 88px;
                 font-weight: 700;
-                color: #fff;
+                color: $globalTextColor;
             }
 
             & p {
@@ -37,7 +37,7 @@
                 font-size: 21px;
                 line-height: 33px;
                 font-weight: 400;
-                color: white;
+                color: $globalTextColor;
 
             }
 
@@ -48,16 +48,16 @@
                     text-decoration: none;
                     padding: 20px 44px;
                     font-size: 18px;
-                    background: #fca61f;
+                    background: $mainButtonColor;
                     border: none;
-                    color: #fff;
+                    color: $globalTextColor;
                     border-radius: 35px;
                     line-height: 20px;
                     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
                     &:hover {
                         transition: 0.5s;
-                        background-color: #6f34fe;
+                        background-color: $hoveredButtonColor;
                         cursor: pointer;
                     }
                 }
@@ -72,7 +72,7 @@
             .seeButton {
                 position: relative;
                 text-decoration: none;
-                color: #fca61f;
+                color: $mainButtonColor;
                 margin-left: 28px;
                 font-size: 20px;
                 line-height: 20px;
@@ -86,7 +86,7 @@
                     right: 0;
                     height: 2px;
                     width: 100%;
-                    background-color: #fca61f;
+                    background-color: $mainButtonColor;
                     position: absolute;
 
 
@@ -95,11 +95,11 @@
 
                 &:hover {
                     transition: 0.3s;
-                    color: white;
+                    color: $globalTextColor;
 
                     &::after{
                         transition: 0.3s;
-                        background-color: white;
+                        background-color: $globalTextColor;
                     }
                 }
 
