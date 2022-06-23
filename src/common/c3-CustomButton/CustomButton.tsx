@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import s from './CustomButton.module.scss'
 
-type CustomButtonType = {
+type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+
+type CustomButtonType = DefaultButtonPropsType & {
     text?:string
     customClassName?:string
 }
 
 
-export const CustomButton = ({text, customClassName}:CustomButtonType) => {
+export const CustomButton = ({text, customClassName, onClick}:CustomButtonType) => {
 
     const customClass = customClassName ? `${customClassName} ${s.newButton}` : `${s.newButton}`
 
     return (
-        <div>
-            <button className={customClass}>{text}</button>
-        </div>
+      <div>
+          <button onClick={onClick} className={customClass}>{text}</button>
+      </div>
     );
 };
 

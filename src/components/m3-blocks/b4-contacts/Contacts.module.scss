@@ -1,6 +1,6 @@
 @import '../../../common/c2-styles/sass/variables';
 
-.mainBox {
+.root {
   background-color: $secondBackgroundColor;
   padding: 50px;
 
@@ -30,6 +30,11 @@
           padding: 17px 30px;
           color: #a09cbb;
           border-radius: 30px;
+          outline: none;
+        }
+
+        & input.error,  {
+          border: 2px solid red;
         }
       }
 
@@ -48,9 +53,14 @@
         border-radius: 30px;
         padding: 17px 30px;
         resize: none;
+        outline: none;
       }
 
-      .buttonStule{
+      & textarea.error {
+        border: 2px solid red;
+      }
+
+      .buttonStyle{
         margin: 10px;
         display: flex;
 
