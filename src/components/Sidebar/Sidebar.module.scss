@@ -1,0 +1,65 @@
+@import "src/styles/variables";
+
+
+.aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+  width: 110px;
+  padding: 2.5rem;
+  background-color: $secondBackgroundColor;
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav {
+
+
+}
+
+.navLogo {
+  color: white;
+}
+
+
+.navMenu {
+
+}
+.navList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+}
+.navItem {
+
+}
+.navLink {
+
+  svg {
+    font-size: 30px;
+    color: white;
+  }
+
+}
+
+.active {
+ & svg {
+   color: #FCA61F;
+ }
+}
+
+.navFooter {
+text-align: center;
+  & .copyright {
+
+  }
+
+
+}
+

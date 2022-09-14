@@ -1,0 +1,72 @@
+.shapeBox{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  & svg {
+    position: absolute;
+  }
+
+  .p1 {
+    left: 2%;
+    top: 10%;
+
+  }
+  .p2 {
+    left: 18%;
+    top: 30%;
+  }
+  .p3 {
+    left: 5%;
+    bottom: 30%;
+  }
+  .p4 {
+    right: 5%;
+    bottom: 30%;
+  }
+
+  .p5 {
+    right: 5%;
+    bottom: 10%;
+  }
+  .p6 {
+    left: 18%;
+    bottom: 10%;
+  }
+  .p7 {
+    right: 36%;
+    bottom: 10%;
+  }
+  .p8 {
+    right: 36%;
+    top: 10%;
+  }
+
+  .p9 {
+    right: 6%;
+    top: 10%;
+  }
+
+  .p10 {
+    right: 36%;
+    top: 30%;
+  }
+
+  .p12 {
+    right: 18%;
+    top: 30%;
+  }
+
+
+
+
+}
+
+.container {
+  margin-left: 110px;
+  height: 80vh
+;
+}
+
