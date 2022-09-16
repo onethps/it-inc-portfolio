@@ -22,11 +22,13 @@
 .scrollDown {
     position: absolute;
     bottom: 2.5rem;
+    cursor: pointer;
+    color: white;
 
 }
 
 .mouse {
-    border: 2px solid black;
+    border: 2px solid white;
     display: block;
     height: 1.6rem;
     width: 1.25rem;
@@ -60,7 +62,7 @@
     content: '';
     width: 0.25rem;
     height: 0.25rem;
-    background-color: black;
+    background-color: white;
     position: absolute;
     top: .5rem;
     left: 50%;

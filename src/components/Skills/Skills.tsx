@@ -1,22 +1,22 @@
-import React, { forwardRef, MutableRefObject } from 'react';
+import React from 'react';
 import style from './Skills.module.scss';
-import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import SkillItem from './Skill-Item/Skill-Item';
+import { skillsData, SkillsDataType } from './skillsDB';
+import SectionTitle from '../../common/SectionTitle/SectionTitle';
 
-// eslint-disable-next-line react/display-name
 const Skills = ({
   skillsRef,
 }: {
   skillsRef: React.MutableRefObject<HTMLDivElement | null>;
 }) => {
   return (
-    <section className={style.mainSkillBlock} ref={skillsRef}>
-      <div className={style.SkillsContainer}>
+    <section className={style.root} ref={skillsRef}>
+      <div className={style.container}>
         <SectionTitle title={'My Skills'} />
-        <div className={style.skillsBlock}>
-          <SkillItem bgColor={'red'} />
-          <SkillItem bgColor={'blue'} />
-          <SkillItem bgColor={'yellow'} />
+        <div className={style.contentWrapper}>
+          {skillsData.map((skill: SkillsDataType) => {
+            return <SkillItem key={skill.id} skill={skill} />;
+          })}
         </div>
       </div>
     </section>

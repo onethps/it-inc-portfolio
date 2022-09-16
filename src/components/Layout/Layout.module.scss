@@ -1,9 +1,6 @@
 @import "/src/styles/variables";
 @import '/src/styles/mixims';
 
-.root {
-  background-color: $mainBackgroundColor;
-}
 
 .container {
   @include container ()

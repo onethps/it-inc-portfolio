@@ -3,3 +3,41 @@ $mainBackgroundColor: #353353;
 $secondBackgroundColor: #302f4e;
 $mainButtonColor: #fca61f;
 $hoveredButtonColor: #6f34fe;
+
+
+$fist-color: hsl(353, 100%, 65%);
+$title-color: #fff;
+$text-color: #fff;
+$body-color: #353353;
+$container-color: #fff;
+
+/*========== Font and Typography ========== */
+/*========== .5rem = 8px | 1rem = 16px ========== */
+
+$body-font: 'Rubick', sans-serif;
+$h1-font-size: 2.25rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.25rem;
+$normal-font-size: 1rem;
+$small-font-size: 0.875rem;
+$smaller-font-size: 0.813rem;
+
+
+/*========== Font Weigth ========== */
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+/*========== Box shadow ========== */
+//$shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+
+
+/*========== Border radius ========== */
+$border-radius: 20px ;
+
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

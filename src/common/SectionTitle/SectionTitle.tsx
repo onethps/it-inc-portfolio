@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 import style from './BlockTitle.module.scss';
+import { Fade } from 'react-awesome-reveal';
+import { TbGridDots } from 'react-icons/tb';
 
 interface BlockTitleType {
   title: string;
@@ -7,9 +9,13 @@ interface BlockTitleType {
 
 export const SectionTitle: FC<BlockTitleType> = ({ title }) => {
   return (
-    <div className={style.blockTitleBox}>
-      <h3>{title}</h3>
-    </div>
+    <Fade direction={'up'}>
+      <h1 className={style.title}>
+        {' '}
+        <TbGridDots color={'white'} />
+        {title}
+      </h1>
+    </Fade>
   );
 };
 

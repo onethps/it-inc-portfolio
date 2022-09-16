@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    .wrapper {
+        padding: 50px 0;
+
+        .portfolioList {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 360px);
+            grid-gap: 20px;
+
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

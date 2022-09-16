@@ -1,19 +1,14 @@
-.blockTitleBox {
-  color: white;
-  margin-bottom: 50px;
+.title {
+  font-size: 36px;
+  position: relative;
+  margin: 10px 20px;
 
-
-
-  & h3{
-    font-family: "Rubik",sans-serif;
-    font-weight: 700;
-    color: #fafbfb;
-    line-height: 1;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: calc(1.325rem + .9vw);
-
+  svg {
+    position: absolute;
+    font-size: 50px;
+    left: -25px;
+    opacity: 0.1;
+    top: -10px;
   }
-}
 
+}

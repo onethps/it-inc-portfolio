@@ -1,31 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
 import style from './Skill-Item.module.scss';
+import { SkillsDataType } from '../skillsDB';
 
-type SkillItemType = {
-  bgColor?: string;
+type SkillItem = {
+  skill: SkillsDataType;
 };
 
-export const SkillItem = ({ bgColor }: SkillItemType) => {
+export const SkillItem: FC<SkillItem> = ({ skill }) => {
   return (
-    <div className={style.skillItemW}>
-      <div
-        className={
-          bgColor === 'red'
-            ? style.blueSkillItem
-            : bgColor === 'blue'
-            ? style.yellowSkillItem
-            : bgColor === 'yellow'
-            ? style.redSkillItem
-            : ''
-        }
-      >
-        <div className={style.iconSkill} />
-        <h3 className={style.titleSkill}>React</h3>
-        <p className={style.descSkill}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-          nostrud exercitation
-        </p>
+    <div className={style.container}>
+      <div className={style[skill.cardColor]}>
+        <img className={style.icon} src={skill.icon} />
+        <h2 className={style.title}>{skill.Title}</h2>
+        <p className={style.desc}>{skill.Skills}</p>
       </div>
     </div>
   );

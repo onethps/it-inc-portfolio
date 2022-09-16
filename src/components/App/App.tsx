@@ -1,14 +1,12 @@
 import React, { useRef } from 'react';
+import Layout from '../Layout/Layout';
+import About from '../About/About';
+import Skills from '../Skills/Skills';
 
-import Footer from '../components/Footer/Footer';
-import Layout from '../components/Layout/Layout';
+import Contacts from '../Contacts/Contacts';
+import Portfolio from '../Works/Portfolio';
 
-import Skills from '../components/Skills/Skills';
-import Works from '../components/Works/Works';
-import About from '../components/About/About';
-import Contacts from '../components/Contacts/Contacts';
-
-const HomePage = () => {
+function App() {
   const ref = useRef<HTMLDivElement | null>(null);
 
   const scrollToSection = (elemRef: React.MutableRefObject<HTMLDivElement | null>) => {
@@ -24,11 +22,10 @@ const HomePage = () => {
     <Layout>
       <About scrollToSection={scrollToSection} skillsRef={ref} />
       <Skills skillsRef={ref} />
-      <Works />
+      <Portfolio />
       <Contacts />
-      <Footer />
     </Layout>
   );
-};
+}
 
-export default HomePage;
+export default App;
