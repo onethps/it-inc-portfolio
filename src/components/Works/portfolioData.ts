@@ -1,3 +1,5 @@
+import scr1 from '../../assets/PortfolioScreens/1.svg';
+
 export type PortfolioData = {
   id: number;
   screen: string;
@@ -8,25 +10,25 @@ export type PortfolioData = {
 export const portfolioData: PortfolioData[] = [
   {
     id: 1,
-    screen: '',
+    screen: scr1,
     title: 'Todolist',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
   },
   {
     id: 2,
-    screen: '',
+    screen: scr1,
     title: 'Todolist',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
   },
   {
     id: 3,
-    screen: '',
+    screen: scr1,
     title: 'Todolist',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
   },
   {
     id: 4,
-    screen: '',
+    screen: scr1,
     title: 'Todolist',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
   },

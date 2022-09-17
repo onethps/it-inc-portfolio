@@ -1,60 +1,101 @@
 @import "../../../styles/variables";
 
 
-.mainItemPortfolioBlock {
-
+.portfolioItem {
   background-color: $secondBackgroundColor;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 20px;
+  position: relative;
 
-
-
-  .imagePortfolioCover {
-    height: 300px;
-    background-image: url("https://miro.medium.com/max/1400/1*y4AhxtB6WYbAFV_7vnw8bw.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-position: top;
-    border-radius: 20px 20px 0 0;
-
-
-
-    &:hover{
-      background-size: 550px;
-      transition: 1.2s;
+  &:hover {
+    .details {
       cursor: pointer;
-    }
-  }
+      opacity: 0.9;
 
-  .textPortfolioBlock {
-    padding: 50px;
-
-    .textPortfolioTitle {
-      font-size: 20px;
-      font-family: "Rubik",sans-serif;
-      font-weight: 700;
-      color: $globalTextColor;
-      margin-bottom: 20px;
-
-    }
-
-    .textPortfolioDescr {
-      font-size: 15px;
-      line-height: 1.5rem;
-      color: #8b88b1;
-      margin-bottom: 0;
+      .label, .title {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
     }
   }
 
+  .thumb{
+    border-radius: 20px;
 
-  &:hover{
-    .textPortfolioTitle, .textPortfolioDescr{
-      color: #ffd15c;
-      transition: 1s;
-      cursor: pointer;
-    }
   }
+
+
+  .details {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: #6c6ce5;
+
+
+    .label {
+      //animation
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-40px);
+      transition: all 1s cubic-bezier(.075,.82,.165,1);
+      //
+      background-color: #ff4c60;
+      display: inline-block;
+      margin-left: 40px;
+      padding: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    .title {
+      //animation
+      opacity: 0;
+      transform: translateY(-40px);
+      transition: all 1s cubic-bezier(.075,.82,.165,1);
+      //
+
+      margin: 30px;
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+
+  }
+
+  .moreButton {
+    position: absolute;
+    bottom:10px;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FCA61F;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+
+
+    & svg {
+      font-size: 30px;
+    }
+
+  }
+
 
 }
