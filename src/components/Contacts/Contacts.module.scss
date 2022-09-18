@@ -1,15 +1,21 @@
 @import 'src/styles/variables';
 
 .root {
-  background-color: $secondBackgroundColor;
-  padding: 50px;
+  max-width: 1080px;
+  margin: 0 auto;
 
   .container {
-    width: 50%;
-    margin: 0 auto;
+    margin: 50px 0 150px 0;
+    display: grid;
+    grid-template-columns: 40% auto;
+
+    .contactInfo{
+
+    }
 
 
-    .row{
+    .contactForm{
+
       display: flex;
       flex-wrap: wrap;
       justify-content: end;
@@ -57,14 +63,49 @@
       }
 
       & textarea.error {
-        border: 2px solid red;
+        border: 2px solid     #ff4c60;
       }
 
-      .buttonStyle{
+
+      .buttonBlock {
         margin: 10px;
         display: flex;
+        width: 100%;
+        justify-content: flex-start;
+
+
+        & button {
+          background: #ff4c60;
+          box-shadow: 0 0 1px transparent;
+          color: white;
+          border-radius: 30px;
+          font-weight: 700;
+          padding: 12px 32px;
+          transition: all 0.1s ease-out;
+
+
+          &:hover {
+           transform: scale(1.1);
+          }
+
+
+        }
+
 
       }
+
+
+      & span {
+        border-radius: 20px;
+        margin: 20px 0;
+        color: #155724;
+        padding: 15px 20px;
+        letter-spacing: 0.03rem;
+        background-color: #d4edda;
+        display: block;
+        width: 100%;
+      }
+
 
     }
 

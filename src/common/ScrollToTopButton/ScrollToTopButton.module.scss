@@ -1,0 +1,26 @@
+.topToBtn {
+  position: relative;
+
+
+  .iconPosition {
+    transition: transform .8s cubic-bezier(.88,-.36,.16,1.72);
+    transform: translate(110px);
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    z-index: 20;
+  }
+
+  .active{
+    transform: translate(0);
+  }
+
+  .iconStyle {
+    background-color: #ff4c60;
+    font-size: 60px;
+    border-radius: 100%;
+    cursor: pointer;
+
+
+  }
+}

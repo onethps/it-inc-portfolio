@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './Contacts.module.scss';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import axios from 'axios';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
-import CustomButton from '../../common/CustomButton/CustomButton';
+import axios from 'axios';
 
 export type ContactsDataType = {
   email: string;
@@ -13,28 +12,61 @@ export type ContactsDataType = {
 };
 
 const Contacts = () => {
+  const [loading, setLoading] = useState(false);
+  const [sendMessageStatus, setSendMessageStatus] = useState(false);
+
   const {
     register,
     handleSubmit,
+    reset,
 
     formState: { errors },
-  } = useForm<ContactsDataType>({ mode: 'all' });
+  } = useForm<ContactsDataType>();
 
-  const onSubmit: SubmitHandler<ContactsDataType> = data => {
-    axios
-      .post('https://gmail-sender-onethps.herokuapp.com/sendMessage', data)
-      .catch(err => console.log(err));
+  const onSubmit: SubmitHandler<ContactsDataType> = async senderData => {
+    setLoading(true);
+    try {
+      const data = await axios.post(
+        'https://gmail-sender-onethps.herokuapp.com/sendMessage',
+        senderData,
+      );
+      reset({ email: '', message: '', name: '', subject: '' });
+
+      setLoading(false);
+      if (data.statusText === 'OK') {
+        setSendMessageStatus(true);
+      }
+    } catch (err) {
+      setLoading(false);
+      console.log(err);
+    }
   };
+
+  useEffect(() => {
+    if (sendMessageStatus) {
+      const timerId = setTimeout(() => {
+        setSendMessageStatus(false);
+      }, 5000);
+
+      return () => clearInterval(timerId);
+    }
+  }, [sendMessageStatus]);
 
   return (
     <section className={style.root}>
+      <SectionTitle title={'Get in Touch'} />
       <div className={style.container}>
-        <SectionTitle title={'Contacts'} />
+        <div className={style.contactInfo}>
+          <h2>Let&apos;s talk about everything!</h2>
+          <span>
+            Don&apos;t like forms? Send me an <span>email</span>. 👋
+          </span>
+        </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className={style.row}>
+        <form onSubmit={handleSubmit(onSubmit)} className={style.contactForm}>
           <div className={style.InputEmail}>
             <input
-              placeholder={'email'}
+              placeholder={'Your email'}
               {...register('email', { required: true })}
               className={errors.email ? style.error : ''}
             />
@@ -42,7 +74,7 @@ const Contacts = () => {
 
           <div className={style.InputName}>
             <input
-              placeholder={'name'}
+              placeholder={'Enter your name'}
               {...register('name', { required: true })}
               className={errors.name ? style.error : ''}
             />
@@ -50,23 +82,27 @@ const Contacts = () => {
 
           <div className={style.Subject}>
             <input
-              placeholder={'subject'}
+              placeholder={'Enter Subject'}
               {...register('subject', { required: true })}
               className={errors.subject ? style.error : ''}
             />
           </div>
 
           <textarea
-            placeholder={'message'}
+            placeholder={'Enter your message...'}
             {...register('message', { required: true })}
             rows={10}
             className={errors.message ? style.error : ''}
           />
-          <CustomButton
-            text={'Submit'}
-            type={'submit'}
-            customClassName={style.buttonStyle}
-          />
+          <div className={style.buttonBlock}>
+            {loading ? (
+              <div>loading....</div>
+            ) : (
+              <button type={'submit'}>Send Message</button>
+              // <CustomButton text={'Send message'} type={'submit'} />
+            )}
+          </div>
+          {sendMessageStatus ? <span>Your message has been sent!</span> : null}
         </form>
       </div>
     </section>
