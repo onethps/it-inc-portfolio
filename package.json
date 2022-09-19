@@ -1,6 +1,7 @@
 {
   "name": "it-inc-portfolio",
   "version": "0.1.0",
+  "homepage": "https://github.com/onethps/it-inc-portfolio",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -17,6 +18,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-react-app": "6",
     "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^4.0.0",
     "hook-form": "^0.0.1",
     "node-sass": "^7.0.1",
     "prettier": "^2.7.1",
@@ -38,7 +40,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint-fix": "eslint --fix"
+    "lint-fix": "eslint --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
