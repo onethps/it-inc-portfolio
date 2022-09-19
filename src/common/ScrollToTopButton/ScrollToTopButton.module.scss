@@ -1,3 +1,5 @@
+@import "src/styles/variables";
+
 .topToBtn {
   position: relative;
 
@@ -16,7 +18,7 @@
   }
 
   .iconStyle {
-    background-color: #ff4c60;
+    background-color: $button-color;
     font-size: 60px;
     border-radius: 100%;
     cursor: pointer;

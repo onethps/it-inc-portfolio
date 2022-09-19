@@ -10,7 +10,7 @@ const Skills = ({
   skillsRef: React.MutableRefObject<HTMLDivElement | null>;
 }) => {
   return (
-    <section className={style.root} ref={skillsRef}>
+    <section className={style.root} ref={skillsRef} id={'skills'}>
       <div className={style.container}>
         <SectionTitle title={'My Skills'} />
         <div className={style.contentWrapper}>

@@ -1,4 +1,5 @@
 @import 'src/styles/variables';
+@import 'src/styles/mixims';
 
 .root {
   max-width: 1080px;
@@ -75,18 +76,7 @@
 
 
         & button {
-          background: #ff4c60;
-          box-shadow: 0 0 1px transparent;
-          color: white;
-          border-radius: 30px;
-          font-weight: 700;
-          padding: 12px 32px;
-          transition: all 0.1s ease-out;
-
-
-          &:hover {
-           transform: scale(1.1);
-          }
+          @include button()
 
 
         }

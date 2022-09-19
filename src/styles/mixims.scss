@@ -1,8 +1,9 @@
 
 @mixin skillCard ($bg, $shadow) {
   border-radius: 20px;
-  padding: 30px;
+  padding: 15px;
   display: flex;
+  min-width: 100%;
   gap: 15px;
   flex-direction: column;
   align-items: center;
@@ -17,4 +18,22 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@mixin button () {
+  background-color: $button-color;
+  box-shadow: 0 0 1px transparent;
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  padding: 12px 32px;
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    background-color: $button-hovered-color;
+  }
 }

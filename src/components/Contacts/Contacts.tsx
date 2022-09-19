@@ -53,7 +53,7 @@ const Contacts = () => {
   }, [sendMessageStatus]);
 
   return (
-    <section className={style.root}>
+    <section className={style.root} id={'contacts'}>
       <SectionTitle title={'Get in Touch'} />
       <div className={style.container}>
         <div className={style.contactInfo}>

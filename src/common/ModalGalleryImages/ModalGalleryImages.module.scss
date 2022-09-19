@@ -1,0 +1,60 @@
+.container {
+
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background-color: black;
+    z-index: 9;
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .arrowLeft {
+    position: fixed;
+    z-index: 10;
+    font-size: 40px;
+    top: 50%;
+    left: 10%;
+  }
+
+  .arrowRight {
+    position: fixed;
+    z-index: 10;
+    font-size: 40px;
+    top: 50%;
+    right: 10%;
+  }
+
+  .modalContainer {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    z-index: 10;
+
+
+
+    .modal {
+      width: 600px;
+      height: auto;
+      background-color: white;
+
+
+      & img {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+      }
+
+    }
+
+
+
+  }
+
+
+}

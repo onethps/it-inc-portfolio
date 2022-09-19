@@ -3,9 +3,9 @@ import s from './Sidebar.module.scss';
 import React from 'react';
 import { AiOutlineHome } from 'react-icons/ai';
 import { IoLogoPolymer } from 'react-icons/io';
-import { BsFillPersonFill } from 'react-icons/bs';
 import { MdWork } from 'react-icons/md';
 import { Link } from 'react-scroll';
+import { BiCodeBlock } from 'react-icons/bi';
 
 const menuItems = [
   {
@@ -15,13 +15,13 @@ const menuItems = [
   },
   {
     id: 2,
-    Icon: BsFillPersonFill,
-    link: 'works',
+    Icon: BiCodeBlock,
+    link: 'skills',
   },
   {
     id: 3,
     Icon: MdWork,
-    link: 'contacts',
+    link: 'portfolio',
   },
 ];
 

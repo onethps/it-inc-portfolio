@@ -5,17 +5,18 @@ import { AiOutlineZoomIn } from 'react-icons/ai';
 
 type PortfolioItem = {
   portfolioItem: PortfolioData;
+  setToggleGallery: (bool: boolean) => void;
 };
 
-export const PortfolioItem: FC<PortfolioItem> = ({ portfolioItem }) => {
+export const PortfolioItem: FC<PortfolioItem> = ({ portfolioItem, setToggleGallery }) => {
   return (
     <div className={s.portfolioItem}>
       <img src={portfolioItem.screen} alt={'portfolio_img'} className={s.thumb} />
       <div className={s.details}>
         <span className={s.label}>Web Aplication</span>
-        <h1 className={s.title}>Todolist</h1>
+        <h1 className={s.title}>{portfolioItem.title}</h1>
         <div className={s.moreButton}>
-          <AiOutlineZoomIn />
+          <AiOutlineZoomIn onClick={() => setToggleGallery(true)} />
         </div>
       </div>
     </div>
