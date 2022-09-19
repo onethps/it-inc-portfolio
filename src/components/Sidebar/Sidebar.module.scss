@@ -2,6 +2,7 @@
 
 
 .aside {
+  z-index: 100;
   position: fixed;
   left: 0;
   top: 0;
@@ -37,11 +38,14 @@
 
 }
 .navItem {
+  cursor: pointer;
+
 
 }
 .navLink {
 
   svg {
+
     font-size: 30px;
     color: white;
   }
@@ -50,6 +54,7 @@
 
 .active {
  & svg {
+
    color: $button-color;
  }
 }

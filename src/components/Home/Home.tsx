@@ -23,12 +23,12 @@ const Home = ({
   };
 
   return (
-    <section className={style.home} id={'home'}>
+    <section id={'home'} className={style.home}>
       <Shape />
       <Fade>
         <div className={style.container}>
           <img src={avatar} className={style.avatar} />
-          <h2 className={style.nameHeader}>Ivashina Eughen</h2>
+          <h2 className={style.nameHeader}>Ivashina Eugene</h2>
 
           <ReactTypingEffect
             speed={100}

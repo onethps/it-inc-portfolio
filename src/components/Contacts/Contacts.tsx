@@ -53,7 +53,7 @@ const Contacts = () => {
   }, [sendMessageStatus]);
 
   return (
-    <section className={style.root} id={'contacts'}>
+    <section id={'contacts'}>
       <SectionTitle title={'Get in Touch'} />
       <div className={style.container}>
         <div className={style.contactInfo}>
@@ -96,10 +96,9 @@ const Contacts = () => {
           />
           <div className={style.buttonBlock}>
             {loading ? (
-              <div>loading....</div>
+              <div>Loading....</div>
             ) : (
               <button type={'submit'}>Send Message</button>
-              // <CustomButton text={'Send message'} type={'submit'} />
             )}
           </div>
           {sendMessageStatus ? <span>Your message has been sent!</span> : null}

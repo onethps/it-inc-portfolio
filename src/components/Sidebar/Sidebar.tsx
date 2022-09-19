@@ -28,7 +28,7 @@ const menuItems = [
 const Sidebar = () => {
   return (
     <aside className={s.aside}>
-      <a href="#home" className={s.navLogo}>
+      <a href="#a" className={s.navLogo}>
         <IoLogoPolymer fontSize={50} />
       </a>
 

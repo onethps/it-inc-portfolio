@@ -6,20 +6,18 @@ import { portfolioData } from './portfolioData';
 
 const Portfolio = () => {
   return (
-    <section className={style.container} id={'portfolio'}>
-      <div className={style.wrapper}>
-        <SectionTitle title={'My Portfolio'} />
-        <div className={style.portfolioList}>
-          {portfolioData.map(portfolioItem => {
-            return (
-              <PortfolioItem
-                key={portfolioItem.id}
-                screens={portfolioItem.screens}
-                portfolioItem={portfolioItem}
-              />
-            );
-          })}
-        </div>
+    <section id={'portfolio'}>
+      <SectionTitle title={'My Portfolio'} />
+      <div className={style.portfolioList}>
+        {portfolioData.map(portfolioItem => {
+          return (
+            <PortfolioItem
+              key={portfolioItem.id}
+              screens={portfolioItem.screens}
+              portfolioItem={portfolioItem}
+            />
+          );
+        })}
       </div>
     </section>
   );

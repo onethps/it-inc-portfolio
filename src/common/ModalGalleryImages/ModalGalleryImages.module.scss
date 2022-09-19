@@ -16,17 +16,30 @@
   .arrowLeft {
     position: fixed;
     z-index: 10;
-    font-size: 40px;
+    font-size: 70px;
     top: 50%;
     left: 10%;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(0.8);
+    }
+
   }
 
   .arrowRight {
     position: fixed;
     z-index: 10;
-    font-size: 40px;
+    font-size: 70px;
     top: 50%;
     right: 10%;
+    cursor: pointer;
+
+
+    &:active {
+      transform: scale(0.8);
+    }
+
   }
 
   .modalContainer {
@@ -39,14 +52,13 @@
 
 
     .modal {
-      width: 600px;
-      height: auto;
+      max-width: 600px;
       background-color: white;
 
 
       & img {
         object-fit: cover;
-        height: auto;
+        max-height: 540px;
         width: 100%;
       }
 

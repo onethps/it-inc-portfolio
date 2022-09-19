@@ -28,14 +28,13 @@ export const portfolioData: PortfolioData[] = [
     thumb:
       'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2Freact-native-chat.png?alt=media&token=e4a3216a-9cad-46ac-9e89-0995df7b1d9b',
     title: 'React Native Chat + Firebase',
-    demoLink: 'youtube.com',
+    demoLink: 'https://github.com/onethps/react_native_chat_firebase',
     codeLink: 'https://github.com/onethps/react_native_chat_firebase',
     screens: [
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2F1.png?alt=media&token=714c6d93-ceee-4feb-9e26-e73218c5341d',
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2F2.png?alt=media&token=5f9b18a0-027f-43d4-a0d2-9ab55ec1115f',
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2F3.png?alt=media&token=8ce0020b-1bd8-416a-8e47-95ac79f7d9d4',
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2F4.png?alt=media&token=412cc127-4e66-4f0f-8191-06284831ea72',
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2F5.png?alt=media&token=5a0238c5-c784-41a9-9102-905a9d54918c',
+      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2F1.png?alt=media&token=9ceff407-8737-42e7-8eb6-b9790f1b6335',
+      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2F2.png?alt=media&token=97a21a46-d654-417f-8cee-8525b7b1abe8',
+      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2F3.png?alt=media&token=2ad9b363-f9a6-40dd-9857-40faa8ffa58e',
+      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/react-native-chat-screens%2F4.png?alt=media&token=c66af359-10d7-470d-9727-4eee4675d21d',
     ],
   },
   {

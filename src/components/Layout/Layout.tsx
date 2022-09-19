@@ -7,7 +7,9 @@ const Layout: FC<ReactNode> = ({ children }) => {
   return (
     <>
       <Sidebar />
-      <main className={s.main}>{children}</main>
+      <main className={s.container}>
+        <div className={s.wrapper}>{children}</div>
+      </main>
       <ScrollToTopButton />
     </>
   );

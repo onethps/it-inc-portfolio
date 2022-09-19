@@ -1,22 +1,24 @@
 @import 'src/styles/variables';
 @import 'src/styles/mixims';
 
-.root {
-  max-width: 1080px;
-  margin: 0 auto;
+
 
   .container {
     margin: 50px 0 150px 0;
+    padding: 0 30px;
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 1fr;
 
-    .contactInfo{
+    @media screen and (min-width: $breakpoint-xl) {
+      grid-template-columns: 0.7fr 1fr;
+    }
 
+    .contactInfo {
+      padding: 40px 20px;
     }
 
 
-    .contactForm{
-
+    .contactForm {
       display: flex;
       flex-wrap: wrap;
       justify-content: end;
@@ -24,7 +26,11 @@
 
       .InputEmail, .InputName, .Subject{
         display: flex;
-        width: 50%;
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          width: 50%;
+        }
 
         & input {
           width: 100%;
@@ -77,8 +83,6 @@
 
         & button {
           @include button()
-
-
         }
 
 
@@ -101,5 +105,3 @@
 
   }
 
-
-}

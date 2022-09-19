@@ -10,14 +10,12 @@ const Skills = ({
   skillsRef: React.MutableRefObject<HTMLDivElement | null>;
 }) => {
   return (
-    <section className={style.root} ref={skillsRef} id={'skills'}>
-      <div className={style.container}>
-        <SectionTitle title={'My Skills'} />
-        <div className={style.contentWrapper}>
-          {skillsData.map((skill: SkillsDataType) => {
-            return <SkillItem key={skill.id} skill={skill} />;
-          })}
-        </div>
+    <section ref={skillsRef} id={'skills'}>
+      <SectionTitle title={'My Skills'} />
+      <div className={style.skillsList}>
+        {skillsData.map((skill: SkillsDataType) => {
+          return <SkillItem key={skill.id} skill={skill} />;
+        })}
       </div>
     </section>
   );
