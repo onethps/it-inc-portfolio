@@ -113,11 +113,19 @@
         }
       }
 
+      & a {
+        color: inherit;
+      }
 
       .showGalleryButton {
         font-size: 30px;
+        display: flex;
+        align-self: center;
 
       }
+
+
+
 
     }
 

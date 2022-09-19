@@ -1,18 +1,28 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import s from './PortfolioItem.module.scss';
 import { PortfolioData } from '../portfolioData';
 import { AiOutlineZoomIn } from 'react-icons/ai';
 import { BiCodeAlt, BiCodeBlock } from 'react-icons/bi';
+import ModalGalleryImages from '../../../common/ModalGalleryImages/ModalGalleryImages';
 
 type PortfolioItem = {
   portfolioItem: PortfolioData;
-  setToggleGallery: (bool: boolean) => void;
+  screens: string[];
 };
 
-export const PortfolioItem: FC<PortfolioItem> = ({ portfolioItem, setToggleGallery }) => {
+export const PortfolioItem: FC<PortfolioItem> = ({ portfolioItem, screens }) => {
+  const [toggleGallery, setToggleGallery] = useState(false);
+
   return (
     <div className={s.portfolioItem}>
-      <img src={portfolioItem.screen} alt={'portfolio_img'} className={s.thumb} />
+      {toggleGallery && (
+        <ModalGalleryImages
+          screens={screens}
+          toggle={toggleGallery}
+          setToggle={setToggleGallery}
+        />
+      )}
+      <img src={portfolioItem.thumb} alt={'portfolio_img'} className={s.thumb} />
       <div className={s.details}>
         <span className={s.label}>Web Aplication</span>
         <h1 className={s.title}>{portfolioItem.title}</h1>
@@ -26,17 +36,15 @@ export const PortfolioItem: FC<PortfolioItem> = ({ portfolioItem, setToggleGalle
           </li>
           <li className={s.buttonItem}>
             <label className={s.iconLabel}>Demo</label>
-            <BiCodeBlock
-              className={s.showGalleryButton}
-              onClick={() => setToggleGallery(true)}
-            />
+            <a href={portfolioItem.demoLink} target={'_blank'} rel="noreferrer">
+              <BiCodeBlock className={s.showGalleryButton} />
+            </a>
           </li>
           <li className={s.buttonItem}>
             <label className={s.iconLabel}>Code</label>
-            <BiCodeAlt
-              className={s.showGalleryButton}
-              onClick={() => setToggleGallery(true)}
-            />
+            <a href={portfolioItem.codeLink} target={'_blank'} rel="noreferrer">
+              <BiCodeAlt className={s.showGalleryButton} />
+            </a>
           </li>
         </ul>
       </div>
