@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import s from './PortfolioItem.module.scss';
 import { PortfolioData } from '../portfolioData';
 import { AiOutlineZoomIn } from 'react-icons/ai';
+import { BiCodeAlt, BiCodeBlock } from 'react-icons/bi';
 
 type PortfolioItem = {
   portfolioItem: PortfolioData;
@@ -15,9 +16,29 @@ export const PortfolioItem: FC<PortfolioItem> = ({ portfolioItem, setToggleGalle
       <div className={s.details}>
         <span className={s.label}>Web Aplication</span>
         <h1 className={s.title}>{portfolioItem.title}</h1>
-        <div className={s.moreButton}>
-          <AiOutlineZoomIn onClick={() => setToggleGallery(true)} />
-        </div>
+        <ul className={s.moreButtonsList}>
+          <li className={s.buttonItem}>
+            <label className={s.iconLabel}>Screenshots</label>
+            <AiOutlineZoomIn
+              className={s.showGalleryButton}
+              onClick={() => setToggleGallery(true)}
+            />
+          </li>
+          <li className={s.buttonItem}>
+            <label className={s.iconLabel}>Demo</label>
+            <BiCodeBlock
+              className={s.showGalleryButton}
+              onClick={() => setToggleGallery(true)}
+            />
+          </li>
+          <li className={s.buttonItem}>
+            <label className={s.iconLabel}>Code</label>
+            <BiCodeAlt
+              className={s.showGalleryButton}
+              onClick={() => setToggleGallery(true)}
+            />
+          </li>
+        </ul>
       </div>
     </div>
   );
