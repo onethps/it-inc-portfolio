@@ -73,7 +73,7 @@ const Home = ({
           </ul>
 
           <a
-            href="https://onethps.github.io/it-inc-portfolio/assets/download/CV_Eugene_Ivashina.pdf"
+            href="https://github.com/onethps/it-inc-portfolio/raw/master/src/assets/download/CV_Eugene_Ivashina.pdf"
             target={'_blank'}
             className={style.cvButton}
           >
