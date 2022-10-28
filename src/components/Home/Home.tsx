@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Home.module.scss';
 import avatar from '../../assets/avatar.svg';
+
 import {
   AiFillGithub,
   AiFillInstagram,
@@ -10,6 +11,7 @@ import {
 import Shape from '../../common/Shape/Shape';
 import { Fade } from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
+import { Link } from 'react-scroll';
 
 const Home = ({
   scrollToSection,
@@ -70,7 +72,13 @@ const Home = ({
             </li>
           </ul>
 
-          <button className={style.cvButton}>Download CV</button>
+          <a
+            href="https://onethps.github.io/it-inc-portfolio/assets/download/CV_Eugene_Ivashina.pdf"
+            target={'_blank'}
+            className={style.cvButton}
+          >
+            Download CV
+          </a>
 
           <div className={style.scrollDown} onClick={scrollToSectionHandle}>
             <h4>Scroll Down</h4>
