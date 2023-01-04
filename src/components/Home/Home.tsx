@@ -27,6 +27,7 @@ const Home = ({
   return (
     <section id={'home'} className={style.home}>
       <Shape />
+      
       <Fade>
         <div className={style.container}>
           <img src={avatar} className={style.avatar} />

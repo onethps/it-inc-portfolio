@@ -1,11 +1,15 @@
 import React, { useRef } from 'react';
-import Layout from '../Layout/Layout';
+import Layout from './components/Layout/Layout';
 
-import Skills from '../Skills/Skills';
+import Skills from './components/Skills/Skills';
 
-import Contacts from '../Contacts/Contacts';
-import Portfolio from '../Portfolio/Portfolio';
-import Home from '../Home/Home';
+import Contacts from './components/Contacts/Contacts';
+import Portfolio from './components/Portfolio/Portfolio';
+import Home from './components/Home/Home';
+
+
+
+
 
 function App() {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -21,6 +25,8 @@ function App() {
 
   return (
     <Layout>
+    
+
       <Home scrollToSection={scrollToSection} skillsRef={ref} />
       <Skills skillsRef={ref} />
       <Portfolio />

@@ -3,8 +3,9 @@ import style from './Contacts.module.scss';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import axios from 'axios';
+import { emailValidation, nameRegex } from '../../utils/validations.utils';
 
-export type ContactsDataType = {
+export type IFormInputs = {
   email: string;
   name: string;
   subject: string;
@@ -12,8 +13,8 @@ export type ContactsDataType = {
 };
 
 const Contacts = () => {
-  const [loading, setLoading] = useState(false);
-  const [sendMessageStatus, setSendMessageStatus] = useState(false);
+  const [isFetching, setIsFetching] = useState<boolean>(false);
+  const [isSuccessSendEmail, setIsSuccessSendEmail] = useState<boolean>(false);
 
   const {
     register,
@@ -21,36 +22,37 @@ const Contacts = () => {
     reset,
 
     formState: { errors },
-  } = useForm<ContactsDataType>();
+  } = useForm<IFormInputs>({mode:'onChange'});
 
-  const onSubmit: SubmitHandler<ContactsDataType> = async senderData => {
-    setLoading(true);
+  const fetchEmail = async (emailSendData: IFormInputs) => {
+    setIsFetching(true);
     try {
       const data = await axios.post(
-        'https://gmail-sender-onethps.herokuapp.com/sendMessage',
-        senderData,
+        `${process.env.REACT_APP_EMAIL_LINK}/sendMessage`,
+        emailSendData,
       );
-      reset({ email: '', message: '', name: '', subject: '' });
-
-      setLoading(false);
+      setIsFetching(false);
       if (data.statusText === 'OK') {
-        setSendMessageStatus(true);
+        setIsSuccessSendEmail(true);
       }
     } catch (err) {
-      setLoading(false);
-      console.log(err);
+      setIsFetching(false);
+      throw new Error(err as string);
     }
-  };
+  }
+
+  const onSubmit: SubmitHandler<IFormInputs> = data => fetchEmail(data)
+
 
   useEffect(() => {
-    if (sendMessageStatus) {
+    if (isSuccessSendEmail) {
       const timerId = setTimeout(() => {
-        setSendMessageStatus(false);
+        setIsSuccessSendEmail(false);
       }, 5000);
 
       return () => clearInterval(timerId);
     }
-  }, [sendMessageStatus]);
+  }, [isSuccessSendEmail]);
 
   return (
     <section id={'contacts'}>
@@ -67,7 +69,10 @@ const Contacts = () => {
           <div className={style.InputEmail}>
             <input
               placeholder={'Your email'}
-              {...register('email', { required: true })}
+              {...register('email', { required: "Please enter your email address", pattern: {
+                value: emailValidation,
+                message: "Invalid email address"
+              } })}
               className={errors.email ? style.error : ''}
             />
           </div>
@@ -75,7 +80,10 @@ const Contacts = () => {
           <div className={style.InputName}>
             <input
               placeholder={'Enter your name'}
-              {...register('name', { required: true })}
+              {...register('name', { required: true, pattern: {
+                value: nameRegex,
+                message: 'Invalid Name'
+              } })}
               className={errors.name ? style.error : ''}
             />
           </div>
@@ -95,13 +103,13 @@ const Contacts = () => {
             className={errors.message ? style.error : ''}
           />
           <div className={style.buttonBlock}>
-            {loading ? (
+            {isFetching ? (
               <div>Loading....</div>
             ) : (
               <button type={'submit'}>Send Message</button>
             )}
           </div>
-          {sendMessageStatus ? <span>Your message has been sent!</span> : null}
+          {isSuccessSendEmail ? <span>Your message has been sent!</span> : null}
         </form>
       </div>
     </section>

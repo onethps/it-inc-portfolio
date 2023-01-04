@@ -1,29 +1,9 @@
 import s from './Sidebar.module.scss';
 
-import React from 'react';
-import { AiOutlineHome } from 'react-icons/ai';
 import { IoLogoPolymer } from 'react-icons/io';
-import { MdWork } from 'react-icons/md';
 import { Link } from 'react-scroll';
-import { BiCodeBlock } from 'react-icons/bi';
+import { menuItems } from './menu.data';
 
-const menuItems = [
-  {
-    id: 1,
-    Icon: AiOutlineHome,
-    link: 'home',
-  },
-  {
-    id: 2,
-    Icon: BiCodeBlock,
-    link: 'skills',
-  },
-  {
-    id: 3,
-    Icon: MdWork,
-    link: 'portfolio',
-  },
-];
 
 const Sidebar = () => {
   return (

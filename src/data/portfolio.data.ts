@@ -40,15 +40,16 @@ export const portfolioData: PortfolioData[] = [
   {
     id: 3,
     thumb:
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/learn-cards-screens%2Flearn-cards.png?alt=media&token=01e37f07-2ea7-49dc-905a-4639bf215a1f',
+      'https://user-images.githubusercontent.com/40173213/210627034-1a6349c0-a90c-45f8-880c-aee8c0766f4d.jpg',
     title: 'Learn Cards',
-    demoLink: 'https://onethps.github.io/friday-cards-project/',
-    codeLink: 'https://github.com/onethps/friday-cards-project',
+    demoLink: 'https://friday-project-two.vercel.app/',
+    codeLink: 'https://github.com/andreu6454/friday-project',
     screens: [
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/learn-cards-screens%2FScreenshot_1.png?alt=media&token=5247c0d3-1be9-44ba-b3a0-4de4c4060216',
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/learn-cards-screens%2FScreenshot_2.png?alt=media&token=71b8fcba-bc89-4bf6-ae89-569c636f85d9',
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/learn-cards-screens%2FScreenshot_3.png?alt=media&token=8581efc7-6e2c-4400-b92a-94e0e208badc',
-      'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/learn-cards-screens%2FScreenshot_4.png?alt=media&token=b02ea8f2-9c0e-422a-a605-375bc11eba8c',
+      'https://user-images.githubusercontent.com/40173213/210636930-97a41333-5b73-4a82-8145-80601089dd53.png',
+      'https://user-images.githubusercontent.com/40173213/210636993-3f13e1ed-fa14-468f-915e-751a3410a492.png',
+      'https://user-images.githubusercontent.com/40173213/210637589-4a3edd5a-76df-45a5-9c5a-dc68b854d748.png',
+      'https://user-images.githubusercontent.com/40173213/210637735-9d604eac-af06-4089-a85f-b3ef1bb43d37.png',
+      'https://user-images.githubusercontent.com/40173213/210637912-f7a37a37-e7a7-4f77-8e04-b7fb3154a34a.png',
     ],
   },
   {
