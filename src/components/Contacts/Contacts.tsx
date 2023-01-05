@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { MutableRefObject, useRef, useState } from 'react';
 import style from './Contacts.module.scss';
-import { SubmitHandler, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
-import axios from 'axios';
 import { emailValidation, nameRegex } from '../../utils/validations.utils';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export type IFormInputs = {
   email: string;
@@ -14,45 +16,33 @@ export type IFormInputs = {
 
 const Contacts = () => {
   const [isFetching, setIsFetching] = useState<boolean>(false);
-  const [isSuccessSendEmail, setIsSuccessSendEmail] = useState<boolean>(false);
 
   const {
     register,
-    handleSubmit,
     reset,
-
     formState: { errors },
-  } = useForm<IFormInputs>({mode:'onChange'});
+  } = useForm<IFormInputs>({ mode: 'onChange' });
 
-  const fetchEmail = async (emailSendData: IFormInputs) => {
-    setIsFetching(true);
+  const form = useRef() as MutableRefObject<HTMLFormElement>;
+
+  const fetchEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsFetching(true)
     try {
-      const data = await axios.post(
-        `${process.env.REACT_APP_EMAIL_LINK}/sendMessage`,
-        emailSendData,
+      await emailjs.sendForm(
+        `${process.env.REACT_APP_SERVICE_ID}`,
+        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        form.current,
+        `${process.env.REACT_APP_PUBLIC_KEY}`,
       );
-      setIsFetching(false);
-      if (data.statusText === 'OK') {
-        setIsSuccessSendEmail(true);
-      }
+      toast.success('Данные отправлены');
+      reset();
+      setIsFetching(false)
     } catch (err) {
-      setIsFetching(false);
-      throw new Error(err as string);
+      toast.error('Ошибка отправки');
+      setIsFetching(false)
     }
-  }
-
-  const onSubmit: SubmitHandler<IFormInputs> = data => fetchEmail(data)
-
-
-  useEffect(() => {
-    if (isSuccessSendEmail) {
-      const timerId = setTimeout(() => {
-        setIsSuccessSendEmail(false);
-      }, 5000);
-
-      return () => clearInterval(timerId);
-    }
-  }, [isSuccessSendEmail]);
+  };
 
   return (
     <section id={'contacts'}>
@@ -65,14 +55,17 @@ const Contacts = () => {
           </span>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className={style.contactForm}>
+        <form ref={form} onSubmit={fetchEmail} className={style.contactForm}>
           <div className={style.InputEmail}>
             <input
               placeholder={'Your email'}
-              {...register('email', { required: "Please enter your email address", pattern: {
-                value: emailValidation,
-                message: "Invalid email address"
-              } })}
+              {...register('email', {
+                required: 'Please enter your email address',
+                pattern: {
+                  value: emailValidation,
+                  message: 'Invalid email address',
+                },
+              })}
               className={errors.email ? style.error : ''}
             />
           </div>
@@ -80,10 +73,13 @@ const Contacts = () => {
           <div className={style.InputName}>
             <input
               placeholder={'Enter your name'}
-              {...register('name', { required: true, pattern: {
-                value: nameRegex,
-                message: 'Invalid Name'
-              } })}
+              {...register('name', {
+                required: true,
+                pattern: {
+                  value: nameRegex,
+                  message: 'Invalid Name',
+                },
+              })}
               className={errors.name ? style.error : ''}
             />
           </div>
@@ -109,9 +105,19 @@ const Contacts = () => {
               <button type={'submit'}>Send Message</button>
             )}
           </div>
-          {isSuccessSendEmail ? <span>Your message has been sent!</span> : null}
         </form>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </section>
   );
 };

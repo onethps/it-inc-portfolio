@@ -4,8 +4,6 @@ import SkillItem from './Skill-Item/Skill-Item';
 import { skillsData, SkillsDataType } from './skillsDB';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
 
-
-
 const Skills = ({
   skillsRef,
 }: {
@@ -13,7 +11,6 @@ const Skills = ({
 }) => {
   return (
     <section ref={skillsRef} id={'skills'}>
-        
       <SectionTitle title={'My Skills'} />
       <div className={style.skillsList}>
         {skillsData.map((skill: SkillsDataType) => {

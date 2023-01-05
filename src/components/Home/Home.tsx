@@ -2,16 +2,13 @@ import React from 'react';
 import style from './Home.module.scss';
 import avatar from '../../assets/avatar.svg';
 
-import {
-  AiFillGithub,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiFillMail,
-} from 'react-icons/ai';
+
 import Shape from '../../common/Shape/Shape';
 import { Fade } from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
-import { Link } from 'react-scroll';
+
+import { LinkIcon } from '../../common/LinkIcon/LinkIcon';
+import { links } from '../../data/links.data';
 
 const Home = ({
   scrollToSection,
@@ -24,10 +21,11 @@ const Home = ({
     scrollToSection(skillsRef);
   };
 
+
   return (
     <section id={'home'} className={style.home}>
       <Shape />
-      
+
       <Fade>
         <div className={style.container}>
           <img src={avatar} className={style.avatar} />
@@ -43,40 +41,14 @@ const Home = ({
             }}
           />
           <ul className={style.socialLinksList}>
-            <li>
-              <a href={'https://github.com/onethps'} target="_blank" rel="noreferrer">
-                <AiFillGithub className={style.linkIcon} />
-              </a>
-            </li>
-            <li>
-              <a
-                href={'https://www.linkedin.com/in/eugen-ivashina/'}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <AiFillLinkedin className={style.linkIcon} />
-              </a>
-            </li>
-            <li>
-              <a
-                href={'https://www.instagram.com/xlimit111/'}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <AiFillInstagram className={style.linkIcon} />
-              </a>
-            </li>
-            <li>
-              <a href={'mailto: onethps@gmail.com'}>
-                <AiFillMail className={style.linkIcon} />
-              </a>
-            </li>
+            {links.map(link => <LinkIcon key={link.id} href={link.href} Icon={link.icon} /> ) }
           </ul>
 
           <a
             href="https://github.com/onethps/it-inc-portfolio/raw/master/src/assets/download/CV_Eugene_Ivashina.pdf"
             target={'_blank'}
             className={style.cvButton}
+            rel="noreferrer"
           >
             Download CV
           </a>

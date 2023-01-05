@@ -14,14 +14,9 @@
     "@types/react-dom": "^17.0.11",
     "@types/react-scroll": "^1.8.4",
     "@types/react-typing-effect": "^2.0.3",
-    "axios": "^0.27.2",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-react-app": "6",
-    "eslint-plugin-prettier": "^4.2.1",
     "gh-pages": "^4.0.0",
     "hook-form": "^0.0.1",
     "node-sass": "^7.0.1",
-    "prettier": "^2.7.1",
     "react": "^17.0.2",
     "react-awesome-reveal": "^4.0.1",
     "react-dom": "^17.0.2",
@@ -63,18 +58,20 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
+    "@emailjs/browser": "^3.10.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "axios": "^0.27.2",
     "eslint": "8.22.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "6",
     "eslint-config-standard-with-typescript": "^22.0.0",
-    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.31.8",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.1",
+    "react-toastify": "^9.1.1"
   },
   "lint-staged": {
     "**/*.{js,ts,jsx,tsx}": [

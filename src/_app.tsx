@@ -7,10 +7,6 @@ import Contacts from './components/Contacts/Contacts';
 import Portfolio from './components/Portfolio/Portfolio';
 import Home from './components/Home/Home';
 
-
-
-
-
 function App() {
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -25,8 +21,6 @@ function App() {
 
   return (
     <Layout>
-    
-
       <Home scrollToSection={scrollToSection} skillsRef={ref} />
       <Skills skillsRef={ref} />
       <Portfolio />

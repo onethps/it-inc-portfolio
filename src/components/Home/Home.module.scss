@@ -41,15 +41,7 @@
                 color: inherit;
             }
 
-            .linkIcon {
-                font-size: 40px;
-                transition: all 0.3s ease-out;
-                cursor: pointer;
 
-                &:hover {
-                    color: $button-color;
-                }
-            }
         }
 
         .cvButton {

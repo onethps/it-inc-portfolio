@@ -1,9 +1,8 @@
 import s from './Sidebar.module.scss';
-
+import React from 'react';
 import { IoLogoPolymer } from 'react-icons/io';
 import { Link } from 'react-scroll';
 import { menuItems } from './menu.data';
-
 
 const Sidebar = () => {
   return (
@@ -26,7 +25,7 @@ const Sidebar = () => {
         </div>
       </nav>
       <div className={s.navFooter}>
-        <span className={s.copyright}>&copy; 2022 - 2023.</span>
+        <span className={s.copyright}>&copy; 2023 - 2024.</span>
       </div>
     </aside>
   );

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import s from './ScrollToTopButton.module.scss';
 import { BsArrowUpShort } from 'react-icons/bs';
-import { animateScroll as scroll, Link } from 'react-scroll';
 
 const ScrollToTopButton = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);

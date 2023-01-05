@@ -1,0 +1,13 @@
+@import "src/styles/variables";
+@import "src/styles/mixims";
+
+
+.root {
+    font-size: 40px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+
+    &:hover {
+        color: $button-color;
+    }
+}

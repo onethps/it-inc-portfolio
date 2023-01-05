@@ -4,17 +4,12 @@ import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import PortfolioItem from './PortfolioItem/PortfolioItem';
 import { portfolioData } from '../../data/portfolio.data';
 
-
-
 const Portfolio = () => {
-
   return (
     <section id={'portfolio'}>
       <SectionTitle title={'My Portfolio'} />
       <div className={style.portfolioList}>
-     
-
-         {portfolioData.map(portfolioItem => {
+        {portfolioData.map(portfolioItem => {
           return (
             <PortfolioItem
               key={portfolioItem.id}
@@ -22,7 +17,7 @@ const Portfolio = () => {
               portfolioItem={portfolioItem}
             />
           );
-        })} 
+        })}
       </div>
     </section>
   );
