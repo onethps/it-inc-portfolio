@@ -67,4 +67,30 @@ export const portfolioData: PortfolioData[] = [
       'https://firebasestorage.googleapis.com/v0/b/chat-d9c43.appspot.com/o/social-network-screens%2FScreenshot_5.png?alt=media&token=826a128b-4427-4dea-bd57-902a17506e1f',
     ],
   },
+  {
+    id: 5,
+    thumb:
+      'blob:https://vercel.com/5c025abd-2b62-419b-872d-67fee25874be',
+    title: 'Adaptive Landing Page',
+    demoLink: 'https://testing-hololabs-ifubw2qxz-onethps.vercel.app/',
+    codeLink: 'https://github.com/onethps/testing-hololabs',
+    screens: [
+      'https://user-images.githubusercontent.com/40173213/211811784-e3e4933e-20b5-4420-9a3c-1905ca178d63.png',
+      'https://user-images.githubusercontent.com/40173213/211811899-aee4c822-bab4-4fb7-addc-dd5b1b57382f.png',
+      'https://user-images.githubusercontent.com/40173213/211811992-f2ea87ac-5b5a-4a34-b39a-2aedb26660ab.png',
+    ],
+  },
+  {
+    id: 5,
+    thumb:
+      'https://user-images.githubusercontent.com/40173213/211812198-fa19d3cd-6a10-4fb7-bc42-08c08c66eff9.png',
+    title: 'News Concept Site',
+    demoLink: 'https://onethps.github.io/news_testing/',
+    codeLink: 'https://github.com/onethps/news_testing',
+    screens: [
+      'https://user-images.githubusercontent.com/40173213/211812319-398b4402-8f91-40eb-a55f-abafce96fb76.png',
+      'https://user-images.githubusercontent.com/40173213/211812420-1ec03750-061e-4ad1-a3af-3f0dd4d82081.png',
+      'https://user-images.githubusercontent.com/40173213/211812585-e4e20898-9e78-4414-a7b9-9394f7230789.png',
+    ],
+  },
 ];
