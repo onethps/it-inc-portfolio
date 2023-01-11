@@ -1,11 +1,12 @@
-@import "src/styles/variables";
+@import 'src/styles/variables';
 
-.topToBtn {
+.ToTopIconButton {
   position: relative;
-
+  background: none;
+  border: none;
 
   .iconPosition {
-    transition: transform .8s cubic-bezier(.88,-.36,.16,1.72);
+    transition: transform 0.8s cubic-bezier(0.88, -0.36, 0.16, 1.72);
     transform: translate(110px);
     position: fixed;
     bottom: 40px;
@@ -13,7 +14,7 @@
     z-index: 20;
   }
 
-  .active{
+  .active {
     transform: translate(0);
   }
 
@@ -22,7 +23,5 @@
     font-size: 60px;
     border-radius: 100%;
     cursor: pointer;
-
-
   }
 }

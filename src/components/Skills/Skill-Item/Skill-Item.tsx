@@ -1,4 +1,4 @@
-import { SkillsDataType } from 'data/skills.data';
+import { SkillsDataType } from 'data/types';
 import React, { FC } from 'react';
 
 import style from './Skill-Item.module.scss';
@@ -11,7 +11,7 @@ export const SkillItem: FC<SkillItem> = ({ skill }) => {
   return (
     <div className={style.container}>
       <div className={style[skill.cardColor]}>
-        <img className={style.icon} src={skill.icon} />
+        <img alt="skill-item" className={style.icon} src={skill.icon} />
         <h2 className={style.title}>{skill.Title}</h2>
         <p className={style.desc}>{skill.Skills}</p>
       </div>

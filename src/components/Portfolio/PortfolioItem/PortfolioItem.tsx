@@ -1,5 +1,5 @@
 import ModalGalleryImages from 'common/ModalGalleryImages/ModalGalleryImages';
-import { PortfolioData } from 'data/portfolio.data';
+import { PortfolioData } from 'data/types';
 import React, { FC, useState } from 'react';
 import { AiOutlineZoomIn } from 'react-icons/ai';
 import { BiCodeAlt, BiCodeBlock } from 'react-icons/bi';
@@ -31,20 +31,20 @@ export const PortfolioItem: FC<PortfolioItem> = ({ portfolioItem, screens }) => 
         <h1 className={s.title}>{portfolioItem.title}</h1>
         <ul className={s.moreButtonsList}>
           <li className={s.buttonItem}>
-            <label className={s.iconLabel}>Screenshots</label>
+            <span className={s.iconLabel}>Screenshots</span>
             <AiOutlineZoomIn
               className={s.showGalleryButton}
               onClick={() => setToggleGallery(true)}
             />
           </li>
           <li className={s.buttonItem}>
-            <label className={s.iconLabel}>Demo</label>
+            <span className={s.iconLabel}>Demo</span>
             <a href={portfolioItem.demoLink} target={'_blank'} rel="noreferrer">
               <BiCodeBlock className={s.showGalleryButton} />
             </a>
           </li>
           <li className={s.buttonItem}>
-            <label className={s.iconLabel}>Code</label>
+            <span className={s.iconLabel}>Code</span>
             <a href={portfolioItem.codeLink} target={'_blank'} rel="noreferrer">
               <BiCodeAlt className={s.showGalleryButton} />
             </a>

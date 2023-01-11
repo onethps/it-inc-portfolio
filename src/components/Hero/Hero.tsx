@@ -1,4 +1,4 @@
-import avatar from 'assets/avatar.svg';
+import { ReactComponent as AvatarIcon } from 'assets/avatar.svg';
 import { LinkIcon } from 'common/LinkIcon/LinkIcon';
 import Shape from 'common/Shape/Shape';
 import { links } from 'data/links.data';
@@ -6,9 +6,9 @@ import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
 
-import style from './Home.module.scss';
+import style from './Hero.module.scss';
 
-const Home = ({
+const Hero = ({
   scrollToSection,
   skillsRef,
 }: {
@@ -19,15 +19,17 @@ const Home = ({
     scrollToSection(skillsRef);
   };
 
+  const href =
+    'https://github.com/onethps/it-inc-portfolio/raw/master/src/assets/download/CV_Eugene_Ivashina.pdf';
+
   return (
     <section id={'home'} className={style.home}>
       <Shape />
 
       <Fade>
         <div className={style.container}>
-          <img src={avatar} className={style.avatar} />
+          <AvatarIcon className={style.avatar} />
           <h2 className={style.nameHeader}>Ivashina Eugene</h2>
-
           <ReactTypingEffect
             speed={100}
             typingDelay={0}
@@ -43,23 +45,18 @@ const Home = ({
             ))}
           </ul>
 
-          <a
-            href="https://github.com/onethps/it-inc-portfolio/raw/master/src/assets/download/CV_Eugene_Ivashina.pdf"
-            target={'_blank'}
-            className={style.cvButton}
-            rel="noreferrer"
-          >
+          <a href={href} target={'_blank'} className={style.cvButton} rel="noreferrer">
             Download CV
           </a>
 
-          <div className={style.scrollDown} onClick={scrollToSectionHandle}>
+          <button className={style.scrollDown} onClick={scrollToSectionHandle}>
             <h4>Scroll Down</h4>
             <div className={style.mouse} />
-          </div>
+          </button>
         </div>
       </Fade>
     </section>
   );
 };
 
-export default Home;
+export default Hero;

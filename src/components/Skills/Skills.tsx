@@ -1,5 +1,6 @@
 import SectionTitle from 'common/SectionTitle/SectionTitle';
-import { skillsData, SkillsDataType } from 'data/skills.data';
+import { skillsData } from 'data/skills.data';
+import { SkillsDataType } from 'data/types';
 import React from 'react';
 
 import SkillItem from './Skill-Item/Skill-Item';

@@ -1,7 +1,5 @@
 .container {
-
-
-  .background {
+  .modalBackdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +9,6 @@
     height: 100%;
     width: 100%;
   }
-
 
   .arrowLeft {
     position: fixed;
@@ -24,7 +21,6 @@
     &:active {
       transform: scale(0.8);
     }
-
   }
 
   .arrowRight {
@@ -35,38 +31,27 @@
     right: 10%;
     cursor: pointer;
 
-
     &:active {
       transform: scale(0.8);
     }
-
   }
 
   .modalContainer {
     position: fixed;
     top: 50%;
     right: 50%;
-    transform: translate(50%,-50%);
+    transform: translate(50%, -50%);
     z-index: 10;
-
-
 
     .modal {
       max-width: 600px;
       background-color: white;
-
 
       & img {
         object-fit: cover;
         max-height: 540px;
         width: 100%;
       }
-
     }
-
-
-
   }
-
-
 }

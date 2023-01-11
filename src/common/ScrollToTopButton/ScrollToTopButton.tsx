@@ -24,11 +24,11 @@ const ScrollToTopButton = () => {
   }, []);
 
   return (
-    <div className={s.topToBtn} onClick={goToTop}>
+    <button type="button" className={s.ToTopIconButton} onClick={goToTop}>
       <BsArrowUpShort
         className={`${s.iconStyle} ${s.iconPosition} ${showTopBtn ? s.active : ''}`}
       />
-    </div>
+    </button>
   );
 };
 

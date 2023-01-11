@@ -32,9 +32,13 @@ const ModalGalleryImages: FC<ModalGalleryImagesType> = ({
     setCurrent(current + 1);
   };
 
+  const handleBackdrop = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <div className={s.container}>
-      <div className={s.background} onClick={() => setToggle(!toggle)} />
+      <button className={s.modalBackdrop} onClick={handleBackdrop} />
       <BsFillArrowLeftCircleFill className={s.arrowLeft} onClick={onLeftPictureHandle} />
       <BsFillArrowRightCircleFill
         className={s.arrowRight}
@@ -42,7 +46,7 @@ const ModalGalleryImages: FC<ModalGalleryImagesType> = ({
       />
       <div className={s.modalContainer}>
         <div className={s.modal}>
-          <img src={screens[current]} />
+          <img alt="current-screenshot" src={screens[current]} />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
 import Contacts from './components/Contacts/Contacts';
-import Home from './components/Home/Home';
+import Hero from './components/Hero/Hero';
 import Layout from './components/Layout/Layout';
 import Portfolio from './components/Portfolio/Portfolio';
 import Skills from './components/Skills/Skills';
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <Layout>
-      <Home scrollToSection={scrollToSection} skillsRef={ref} />
+      <Hero scrollToSection={scrollToSection} skillsRef={ref} />
       <Skills skillsRef={ref} />
       <Portfolio />
       <Contacts />
