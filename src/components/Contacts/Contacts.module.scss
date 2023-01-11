@@ -1,107 +1,96 @@
 @import 'src/styles/variables';
 @import 'src/styles/mixims';
 
+.container {
+  margin: 50px 0 150px 0;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: 1fr;
 
+  @media screen and (min-width: $breakpoint-xl) {
+    grid-template-columns: 0.7fr 1fr;
+  }
 
-  .container {
-    margin: 50px 0 150px 0;
-    padding: 0 30px;
-    display: grid;
-    grid-template-columns: 1fr;
+  .contactInfo {
+    padding: 40px 20px;
+  }
 
-    @media screen and (min-width: $breakpoint-xl) {
-      grid-template-columns: 0.7fr 1fr;
-    }
+  .contactForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
 
-    .contactInfo {
-      padding: 40px 20px;
-    }
-
-
-    .contactForm {
+    .InputEmail,
+    .InputName,
+    .Subject {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: end;
+      width: 100%;
 
-
-      .InputEmail, .InputName, .Subject{
-        display: flex;
-        width: 100%;
-
-        @media screen and (min-width: $breakpoint-lg) {
-          width: 50%;
-        }
-
-        & input {
-          width: 100%;
-          margin: 10px 5px;
-          background: #211e39;
-          border: none;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 1.6;
-          padding: 17px 30px;
-          color: #a09cbb;
-          border-radius: 30px;
-          outline: none;
-        }
-
-        & input.error,  {
-          border: 2px solid red;
-        }
+      @media screen and (min-width: $breakpoint-lg) {
+        width: 50%;
       }
 
-      .Subject{
+      & input {
         width: 100%;
-      }
-
-      & textarea{
-        display: flex;
         margin: 10px 5px;
-        width: 100%;
         background: #211e39;
         border: none;
         font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+        padding: 17px 30px;
         color: #a09cbb;
         border-radius: 30px;
-        padding: 17px 30px;
-        resize: none;
         outline: none;
       }
 
-      & textarea.error {
-        border: 2px solid     #ff4c60;
+      & input.error {
+        border: 2px solid red;
       }
-
-
-      .buttonBlock {
-        margin: 10px;
-        display: flex;
-        width: 100%;
-        justify-content: flex-start;
-
-
-        & button {
-          @include button()
-        }
-
-
-      }
-
-
-      & span {
-        border-radius: 20px;
-        margin: 20px 0;
-        color: #155724;
-        padding: 15px 20px;
-        letter-spacing: 0.03rem;
-        background-color: #d4edda;
-        display: block;
-        width: 100%;
-      }
-
-
     }
 
-  }
+    .Subject {
+      width: 100%;
+    }
 
+    & textarea {
+      display: flex;
+      margin: 10px 5px;
+      width: 100%;
+      background: #211e39;
+      border: none;
+      font-size: 16px;
+      color: #a09cbb;
+      border-radius: 30px;
+      padding: 17px 30px;
+      resize: none;
+      outline: none;
+    }
+
+    & textarea.error {
+      border: 2px solid #ff4c60;
+    }
+
+    .buttonBlock {
+      margin: 10px;
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+
+      & button {
+        @include button();
+      }
+    }
+
+    & span {
+      border-radius: 20px;
+      margin: 20px 0;
+      color: #155724;
+      padding: 15px 20px;
+      letter-spacing: 0.03rem;
+      background-color: #d4edda;
+      display: block;
+      width: 100%;
+    }
+  }
+}

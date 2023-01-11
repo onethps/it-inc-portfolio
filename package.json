@@ -1,6 +1,6 @@
 {
   "homepage": "https://onethps.github.io/it-inc-portfolio",
-  "name": "it-inc-portfolio",
+  "name": "eugene-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,7 +37,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --fix --ext .ts,.tsx .",
     "lint:styles": "stylelint src/**/*.{css,scss}",
-    "lint:prettier": "npx prettier --check src/**/*.{ts,tsx,css,scss}",
+    "lint:prettier": "npx prettier --check src/**/*.{ts,tsx,scss}",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },

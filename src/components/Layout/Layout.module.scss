@@ -1,19 +1,15 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 @import '/src/styles/mixims';
-
 
 .container {
   padding-left: 0;
   @media screen and (min-width: $breakpoint-md) {
-
     padding-left: 110px;
   }
-
 
   .wrapper {
     max-width: 1080px;
     margin: 0 auto;
     overflow: hidden;
   }
-
 }

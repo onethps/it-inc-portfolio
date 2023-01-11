@@ -1,11 +1,4 @@
-export type PortfolioData = {
-  id: number;
-  thumb: string;
-  title: string;
-  demoLink: string;
-  codeLink: string;
-  screens: string[];
-};
+import { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData[] = [
   {

@@ -2,14 +2,7 @@ import CoddingIcon from 'assets/SkillsIcons/coding.png';
 import FoundationIcon from 'assets/SkillsIcons/foundation.png';
 import TestingIcon from 'assets/SkillsIcons/test.png';
 import DesignIcon from 'assets/SkillsIcons/web-design.png';
-
-export type SkillsDataType = {
-  id: number;
-  Title: string;
-  Skills: string;
-  cardColor: 'red' | 'blue' | 'yellow';
-  icon: string;
-};
+import { SkillsDataType } from './types';
 
 export const skillsData: SkillsDataType[] = [
   {
@@ -33,11 +26,11 @@ export const skillsData: SkillsDataType[] = [
     cardColor: 'blue',
     icon: TestingIcon,
   },
-  {
-    id: 4,
-    Title: 'DESIGN',
-    Skills: 'Material UI, Ant-Design, Styled-Components, etc',
-    cardColor: 'red',
-    icon: DesignIcon,
-  },
+  // {
+  //   id: 4,
+  //   Title: 'DESIGN',
+  //   Skills: 'Material UI, Ant-Design, Styled-Components, etc',
+  //   cardColor: 'red',
+  //   icon: DesignIcon,
+  // },
 ];
