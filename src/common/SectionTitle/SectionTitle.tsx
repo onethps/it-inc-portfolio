@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import style from './BlockTitle.module.scss';
 import { Fade } from 'react-awesome-reveal';
 import { TbGridDots } from 'react-icons/tb';
+
+import style from './BlockTitle.module.scss';
 
 interface BlockTitleType {
   title: string;

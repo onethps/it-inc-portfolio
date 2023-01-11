@@ -1,11 +1,10 @@
 import React, { useRef } from 'react';
-import Layout from './components/Layout/Layout';
-
-import Skills from './components/Skills/Skills';
 
 import Contacts from './components/Contacts/Contacts';
-import Portfolio from './components/Portfolio/Portfolio';
 import Home from './components/Home/Home';
+import Layout from './components/Layout/Layout';
+import Portfolio from './components/Portfolio/Portfolio';
+import Skills from './components/Skills/Skills';
 
 function App() {
   const ref = useRef<HTMLDivElement | null>(null);

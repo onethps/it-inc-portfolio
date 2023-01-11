@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
-import s from './Shape.module.scss';
 import { MouseParallax } from 'react-just-parallax';
+
+import s from './Shape.module.scss';
 
 const Shape = () => {
   const containerRef = useRef(null);

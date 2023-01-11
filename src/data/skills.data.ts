@@ -1,7 +1,7 @@
-import CoddingIcon from '../../assets/SkillsIcons/coding.png';
-import FoundationIcon from '../../assets/SkillsIcons/foundation.png';
-import TestingIcon from '../../assets/SkillsIcons/test.png';
-import DesignIcon from '../../assets/SkillsIcons/web-design.png';
+import CoddingIcon from 'assets/SkillsIcons/coding.png';
+import FoundationIcon from 'assets/SkillsIcons/foundation.png';
+import TestingIcon from 'assets/SkillsIcons/test.png';
+import DesignIcon from 'assets/SkillsIcons/web-design.png';
 
 export type SkillsDataType = {
   id: number;

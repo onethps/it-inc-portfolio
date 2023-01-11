@@ -1,4 +1,5 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+
 import s from './CustomButton.module.scss';
 
 type DefaultButtonPropsType = DetailedHTMLProps<

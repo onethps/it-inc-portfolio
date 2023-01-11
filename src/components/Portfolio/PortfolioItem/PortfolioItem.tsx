@@ -1,9 +1,10 @@
+import ModalGalleryImages from 'common/ModalGalleryImages/ModalGalleryImages';
+import { PortfolioData } from 'data/portfolio.data';
 import React, { FC, useState } from 'react';
-import s from './PortfolioItem.module.scss';
-import { PortfolioData } from '../../../data/portfolio.data';
 import { AiOutlineZoomIn } from 'react-icons/ai';
 import { BiCodeAlt, BiCodeBlock } from 'react-icons/bi';
-import ModalGalleryImages from '../../../common/ModalGalleryImages/ModalGalleryImages';
+
+import s from './PortfolioItem.module.scss';
 
 type PortfolioItem = {
   portfolioItem: PortfolioData;
@@ -22,7 +23,9 @@ export const PortfolioItem: FC<PortfolioItem> = ({ portfolioItem, screens }) => 
           setToggle={setToggleGallery}
         />
       )}
-      <img src={portfolioItem.thumb} alt={'portfolio_img'} className={s.thumb} />
+
+      <img src={portfolioItem.thumb} alt={'portfolio-img'} className={s.thumb} />
+
       <div className={s.details}>
         <span className={s.label}>Web Application</span>
         <h1 className={s.title}>{portfolioItem.title}</h1>

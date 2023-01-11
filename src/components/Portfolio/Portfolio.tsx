@@ -1,8 +1,9 @@
+import SectionTitle from 'common/SectionTitle/SectionTitle';
+import { portfolioData } from 'data/portfolio.data';
 import React from 'react';
+
 import style from './Portfolio.module.scss';
-import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import PortfolioItem from './PortfolioItem/PortfolioItem';
-import { portfolioData } from '../../data/portfolio.data';
 
 const Portfolio = () => {
   return (

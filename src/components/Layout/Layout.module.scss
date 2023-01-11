@@ -3,7 +3,11 @@
 
 
 .container {
-  padding-left: 110px;
+  padding-left: 0;
+  @media screen and (min-width: $breakpoint-md) {
+
+    padding-left: 110px;
+  }
 
 
   .wrapper {

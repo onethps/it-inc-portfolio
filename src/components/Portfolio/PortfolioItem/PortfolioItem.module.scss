@@ -1,34 +1,36 @@
-@import "../../../styles/variables";
-
+@import '../../../styles/variables';
 
 .portfolioItem {
   background-color: $secondBackgroundColor;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 20px;
   position: relative;
+  max-width: 330px;
+  max-height: auto;
 
   &:hover {
     .details {
       cursor: pointer;
       opacity: 0.9;
 
-      .label, .title {
+      .label,
+      .title {
         opacity: 1;
         transform: translateY(0);
       }
-
     }
   }
 
-  .thumb{
+  .thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
-
   }
-
 
   .details {
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     border-radius: 20px;
     position: absolute;
     top: 0;
@@ -39,14 +41,11 @@
     opacity: 0;
     background-color: #6c6ce5;
 
-
     .label {
-      //animation
       overflow: hidden;
       opacity: 0;
       transform: translateY(-40px);
-      transition: all 1s cubic-bezier(.075,.82,.165,1);
-      //
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
       background-color: #ff4c60;
       display: inline-block;
       margin-left: 40px;
@@ -59,12 +58,9 @@
     }
 
     .title {
-      //animation
       opacity: 0;
       transform: translateY(-40px);
-      transition: all 1s cubic-bezier(.075,.82,.165,1);
-      //
-
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
       margin: 30px;
       line-height: 1.2;
       overflow: hidden;
@@ -74,21 +70,17 @@
       line-clamp: 2;
       -webkit-box-orient: vertical;
     }
-
-
   }
 
   .moreButtonsList {
     position: absolute;
-    bottom:10px;
+    bottom: 10px;
     left: 30px;
     display: flex;
     gap: 10px;
 
-
-
     .buttonItem {
-      background-color: #FCA61F;
+      background-color: #fca61f;
       width: 50px;
       height: 50px;
       border-radius: 100%;
@@ -121,18 +113,7 @@
         font-size: 30px;
         display: flex;
         align-self: center;
-
       }
-
-
-
-
     }
-
-
-
-
   }
-
-
 }

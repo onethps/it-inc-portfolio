@@ -1,8 +1,9 @@
-import s from './Sidebar.module.scss';
 import React from 'react';
 import { IoLogoPolymer } from 'react-icons/io';
 import { Link } from 'react-scroll';
+
 import { menuItems } from './menu.data';
+import s from './Sidebar.module.scss';
 
 const Sidebar = () => {
   return (

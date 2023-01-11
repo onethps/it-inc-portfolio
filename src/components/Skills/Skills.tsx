@@ -1,8 +1,9 @@
+import SectionTitle from 'common/SectionTitle/SectionTitle';
+import { skillsData, SkillsDataType } from 'data/skills.data';
 import React from 'react';
-import style from './Skills.module.scss';
+
 import SkillItem from './Skill-Item/Skill-Item';
-import { skillsData, SkillsDataType } from './skillsDB';
-import SectionTitle from '../../common/SectionTitle/SectionTitle';
+import style from './Skills.module.scss';
 
 const Skills = ({
   skillsRef,

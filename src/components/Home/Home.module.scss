@@ -1,122 +1,83 @@
-@import "src/styles/variables";
-@import "src/styles/mixims";
+@import 'src/styles/variables';
+@import 'src/styles/mixims';
 
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
-.home{
-
+  .container {
+    height: 100vh;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 
-
-    .container{
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-
-
-        .avatar {
-            width: 150px;
-            height: 150px;
-        }
-
-        .nameHeader {
-        }
-
-        .headerTypingInfo {
-        }
-
-        .socialLinksList {
-            display: flex;
-            column-gap: 20px;
-            width: 100%;
-            justify-content: center;
-            padding: 20px;
-
-            & a {
-                color: inherit;
-            }
-
-
-        }
-
-        .cvButton {
-            @include button()
-        }
-
-
-
-        .scrollDown {
-            position: absolute;
-            bottom: 2.5rem;
-            cursor: pointer;
-            color: white;
-
-            .mouse {
-                border: 2px solid white;
-                display: block;
-                height: 1.6rem;
-                width: 1.25rem;
-                margin: auto;
-                margin-top: .75rem;
-                border-radius: 1rem;
-                position: relative;
-
-
-                &::after {
-                    content: '';
-                    width: 0.25rem;
-                    height: 0.25rem;
-                    background-color: white;
-                    position: absolute;
-                    top: .5rem;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    animation: ani-mouse 2s linear infinite;
-
-                    @keyframes ani-mouse {
-                        0% {
-                            top: 29%;
-                        }
-                        15% {
-                            top: 50%;
-                        }
-                        50% {
-                            top: 50%;
-                        }
-                        100% {
-                            top: 29%;
-                        }
-
-
-
-                    }
-                }
-            }
-        }
-
+    .avatar {
+      width: 150px;
+      height: 150px;
     }
 
+    .socialLinksList {
+      display: flex;
+      column-gap: 20px;
+      width: 100%;
+      justify-content: center;
+      padding: 20px;
+
+      & a {
+        color: inherit;
+      }
+    }
+
+    .cvButton {
+      @include button();
+    }
+
+    .scrollDown {
+      position: absolute;
+      bottom: 2.5rem;
+      cursor: pointer;
+      color: white;
+
+      .mouse {
+        border: 2px solid white;
+        display: block;
+        height: 1.6rem;
+        width: 1.25rem;
+        margin: auto;
+        margin-top: 0.75rem;
+        border-radius: 1rem;
+        position: relative;
+
+        &::after {
+          content: '';
+          width: 0.25rem;
+          height: 0.25rem;
+          background-color: white;
+          position: absolute;
+          top: 0.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: ani-mouse 2s linear infinite;
+
+          @keyframes ani-mouse {
+            0% {
+              top: 29%;
+            }
+            15% {
+              top: 50%;
+            }
+            50% {
+              top: 50%;
+            }
+            100% {
+              top: 29%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

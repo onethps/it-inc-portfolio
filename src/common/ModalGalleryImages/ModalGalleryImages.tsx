@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
-import s from './ModalGalleryImages.module.scss';
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
+
+import s from './ModalGalleryImages.module.scss';
 
 type ModalGalleryImagesType = {
   toggle: boolean;

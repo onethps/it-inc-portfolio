@@ -70,7 +70,7 @@ export const portfolioData: PortfolioData[] = [
   {
     id: 5,
     thumb:
-      'blob:https://vercel.com/5c025abd-2b62-419b-872d-67fee25874be',
+      'https://user-images.githubusercontent.com/40173213/211813880-c9d14f68-f8c6-4a8d-b327-e906640283d9.png',
     title: 'Adaptive Landing Page',
     demoLink: 'https://testing-hololabs-ifubw2qxz-onethps.vercel.app/',
     codeLink: 'https://github.com/onethps/testing-hololabs',

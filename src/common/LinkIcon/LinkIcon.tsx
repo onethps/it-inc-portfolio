@@ -1,5 +1,6 @@
 import React from 'react';
 import { IconType } from 'react-icons/lib';
+
 import style from './LinkIcon.module.scss';
 
 type LinIconType = {

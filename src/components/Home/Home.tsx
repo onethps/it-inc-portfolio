@@ -1,14 +1,12 @@
+import avatar from 'assets/avatar.svg';
+import { LinkIcon } from 'common/LinkIcon/LinkIcon';
+import Shape from 'common/Shape/Shape';
+import { links } from 'data/links.data';
 import React from 'react';
-import style from './Home.module.scss';
-import avatar from '../../assets/avatar.svg';
-
-
-import Shape from '../../common/Shape/Shape';
 import { Fade } from 'react-awesome-reveal';
 import ReactTypingEffect from 'react-typing-effect';
 
-import { LinkIcon } from '../../common/LinkIcon/LinkIcon';
-import { links } from '../../data/links.data';
+import style from './Home.module.scss';
 
 const Home = ({
   scrollToSection,
@@ -20,7 +18,6 @@ const Home = ({
   const scrollToSectionHandle = () => {
     scrollToSection(skillsRef);
   };
-
 
   return (
     <section id={'home'} className={style.home}>
@@ -41,7 +38,9 @@ const Home = ({
             }}
           />
           <ul className={style.socialLinksList}>
-            {links.map(link => <LinkIcon key={link.id} href={link.href} Icon={link.icon} /> ) }
+            {links.map(link => (
+              <LinkIcon key={link.id} href={link.href} Icon={link.icon} />
+            ))}
           </ul>
 
           <a

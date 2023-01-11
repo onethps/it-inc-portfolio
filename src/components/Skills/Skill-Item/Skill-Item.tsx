@@ -1,6 +1,7 @@
+import { SkillsDataType } from 'data/skills.data';
 import React, { FC } from 'react';
+
 import style from './Skill-Item.module.scss';
-import { SkillsDataType } from '../skillsDB';
 
 type SkillItem = {
   skill: SkillsDataType;

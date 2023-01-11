@@ -1,11 +1,13 @@
-import React, { MutableRefObject, useRef, useState } from 'react';
-import style from './Contacts.module.scss';
-import { useForm } from 'react-hook-form';
-import SectionTitle from '../../common/SectionTitle/SectionTitle';
-import { emailValidation, nameRegex } from '../../utils/validations.utils';
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+import emailjs from '@emailjs/browser';
+import SectionTitle from 'common/SectionTitle/SectionTitle';
+import React, { MutableRefObject, useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { toast, ToastContainer } from 'react-toastify';
+import { emailValidation, nameRegex } from 'utils/validations.utils';
+
+import style from './Contacts.module.scss';
 
 export type IFormInputs = {
   email: string;
@@ -27,7 +29,7 @@ const Contacts = () => {
 
   const fetchEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsFetching(true)
+    setIsFetching(true);
     try {
       await emailjs.sendForm(
         `${process.env.REACT_APP_SERVICE_ID}`,
@@ -37,10 +39,10 @@ const Contacts = () => {
       );
       toast.success('Данные отправлены');
       reset();
-      setIsFetching(false)
+      setIsFetching(false);
     } catch (err) {
       toast.error('Ошибка отправки');
-      setIsFetching(false)
+      setIsFetching(false);
     }
   };
 

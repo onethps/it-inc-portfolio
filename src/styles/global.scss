@@ -1,18 +1,15 @@
-@import "variables";
-
+@import 'variables';
 
 /*========== Base ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 html {
   scroll-behavior: smooth;
 }
-
 
 body,
 button,
@@ -22,20 +19,20 @@ textarea {
   font-size: $normal-font-size;
 }
 
-
 body {
   background-color: $body-color;
-  line-height:1.7;
+  line-height: 1.7;
   color: $globalTextColor;
 }
 
-h1,h2,h4 {
-  color:$title-color;
+h1,
+h2,
+h4 {
+  color: $title-color;
   font-weight: $font-bold;
 }
 
-
-ul{
+ul {
   list-style: none;
 }
 
@@ -45,7 +42,7 @@ a {
 
 button {
   cursor: pointer;
-  border:none;
+  border: none;
   outline: none;
 }
 

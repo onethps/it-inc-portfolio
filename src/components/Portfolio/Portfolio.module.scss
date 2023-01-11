@@ -1,29 +1,9 @@
 @import '../../styles/variables';
 
-
 .portfolioList {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 25px;
-
-
-    @media screen and (min-width: $breakpoint-xl) {
-        grid-template-columns: repeat(3, 1fr);
-
-    }
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
